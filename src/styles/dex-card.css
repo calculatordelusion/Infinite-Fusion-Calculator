@@ -1,0 +1,61 @@
+.dex-card {
+    /* Main card container */
+    background-color: hsl(var(--muted) / 0.5); /* Equivalent to bg-card/50 */
+    border: 1px solid hsl(var(--border)); /* Equivalent to border-border */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    box-shadow: 0 2px 4px hsl(var(--shadow)); /* Equivalent to shadow-sm */
+    color: hsl(var(--card-foreground)); /* Equivalent to text-card-foreground */
+    overflow: hidden;
+    transition: border-color 0.3s ease; /* Equivalent to transition-colors */
+  }
+  
+  .dex-card:hover {
+    border-color: hsl(var(--primary) / 0.5); /* Equivalent to hover:border-primary/50 */
+  }
+  
+  .dex-card .content {
+    display: flex;
+    padding: 1rem; /* Equivalent to p-4 */
+  }
+  
+  .dex-card .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem; /* Equivalent to mr-4 */
+  }
+  
+  .dex-card .image-container a {
+    display: inline-block;
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+    transition: opacity 0.3s ease; /* Equivalent to transition-opacity */
+  }
+  
+  .dex-card .image-container a:hover {
+    opacity: 0.8; /* Equivalent to hover:opacity-80 */
+  }
+  
+  .dex-card .image-container img {
+    background-color: hsl(var(--accent) / 0.4); /* Equivalent to bg-muted */
+    padding: 0.25rem; /* Equivalent to p-1 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    image-rendering: pixelated; /* Equivalent to pixelated */
+  }
+  
+  .dex-card .image-container p {
+    font-family: monospace; /* Equivalent to font-mono */
+    text-align: center;
+    font-size: 0.75rem; /* Equivalent to text-xs */
+    color: hsl(var(--muted-foreground)); /* Equivalent to text-muted-foreground */
+  }
+  
+  .dex-card .description {
+    flex: 1; /* Equivalent to flex-1 */
+  }
+  
+  .dex-card .description p {
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    line-height: 1.5rem; /* Equivalent to leading-relaxed */
+    color: hsl(var(--card-foreground)); /* Equivalent to text-card-foreground */
+  }
+  

@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 158 100% 33%;
+    --primary-foreground: 150 30% 98%;
+    --secondary: 150 30% 96%;
+    --secondary-foreground: 155 40% 12%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 150 45% 85%;
+    --accent-foreground: 155 40% 12%;
+    --destructive: 0 70% 50%; /* More vibrant red */
+    --destructive-foreground: 0 0% 100%; /* White for maximum contrast */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+    --radius: 0.5rem;
+  
+    --custom-card-background: 210 40% 95%;
+    --custom-image-background: 210 50% 90%;
+    --custom-image-sprite-background: 150 50% 80%;
+    --autogen-image-sprite-background: 200 45% 85%;
+    --custom-image-sprite-border: 150 30% 70%;
+  
+    --grid-line-color: rgba(167, 161, 161, 0.1);
+  }
+  
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 142 62% 42%;
+    --primary-foreground: 155 40% 8%;
+    --secondary: 155 35% 16%;
+    --secondary-foreground: 150 30% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 155 45% 25%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 70% 40%; /* Deep, bold red for dark mode */
+    --destructive-foreground: 0 0% 90%; /* Bright near-white for legibility */
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 224.3 76.3% 48%;
+  
+    --custom-card-background: 217 32% 17%;
+    --custom-image-background: 217 32% 20%;
+    --custom-image-sprite-background: 150 30% 30%;
+    --autogen-image-sprite-background: 200 35% 20%;
+    --custom-image-sprite-border: 150 20% 25%;
+  
+    --grid-line-color: rgba(123, 119, 119, 0.1);
+  }
+  
+}
+
+.grid-lines {
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+      to right,
+      var(--grid-line-color) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
