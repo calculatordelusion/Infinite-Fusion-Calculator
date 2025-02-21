@@ -5,6 +5,7 @@ import { config } from "@/config";
 import { Card, CardDescription, CardHeader } from "@/components/ui/card";
 import type { Metadata } from "next";
 import { Separator } from "@/components/ui/separator";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
 export const metadata: Metadata = {
   title: "Pokémon Infinite Fusion Calculator",
@@ -99,10 +100,51 @@ function Page() {
       {/* Main Fusion Calculation Section */}
       <FusionPage />
 
-      <article className="dark:prose-invert px-2 md:px-8 pt-8 min-w-full prose">
+      <article>
+       
+      <Card className="mx-auto max-w-screen-md">
+      <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead colSpan={2}>
+            <h2 className="mx-auto font-bold text-xl text-center">Game Stats (v6.4)</h2>
+          </TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>Total Base Pokémon</TableCell>
+          <TableCell className="text-right">501</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Total Fusions</TableCell>
+          <TableCell className="text-right">2,51,001</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Fusions with Custom Sprites</TableCell>
+          <TableCell className="text-right">1,30,816</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Total Custom Sprites</TableCell>
+          <TableCell className="text-right">1,80,662</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Auto-Generated Sprites</TableCell>
+          <TableCell className="text-right">2,51,001</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Total Custom Dex Entries</TableCell>
+          <TableCell className="text-right">16,446</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Contributing Artists</TableCell>
+          <TableCell className="text-right">7,060</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+      </Card>
   <Separator className="my-6" />
-
-  <div className="space-y-4">
+  <div className="space-y-4 dark:prose-invert px-2 md:px-8 pt-8 min-w-full prose">
     <p>
       The Pokémon Infinite Fusion Calculator allows you to combine two Pokémon 
       into a unique fusion. You can pick one Pokémon as the "Head" and another as 
