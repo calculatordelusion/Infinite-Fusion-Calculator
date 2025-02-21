@@ -8,7 +8,7 @@ import { Separator } from "../ui/separator";
 import "@/styles/FusionImage.css";
 import { useContext } from "react";
 import SpoilerContext from "@/context/spoiler";
-import { Pokemon, SpriteImage, SpriteType } from "@/types";
+import { PokedexEntryType, Pokemon, SpriteImage, SpriteType } from "@/types";
 import { Book, Sparkle, X } from "lucide-react";
 import {
   Dialog,
@@ -27,6 +27,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import { PokedexEntry } from "./PokedexEntry";
 
 export function AllSpritesDialog({ pokemon }: { pokemon: Pokemon }) {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -255,6 +256,27 @@ export function AllShiniesDialog({
   );
 }
 
+export function PokedexEntryDialog({
+  pokedex_entry,
+}: {
+  pokedex_entry: PokedexEntryType[];
+}) {
+  return (
+    <Dialog>
+      <DialogTrigger>
+        <TooltipWrapper content="Has Custom Dex Entry">
+          <Book className="size-4 text-blue-500 text-xs" />
+        </TooltipWrapper>
+      </DialogTrigger>
+      <DialogContent className="backdrop-blur-sm w-full max-w-[95vw] md:max-w-[1000px] md:max-h-[600px]">
+        <div className="mt-4">
+        <PokedexEntry pokedex_entry={pokedex_entry}/>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
 function FusionImage({
   pokemon,
   fusionIds,
@@ -278,7 +300,8 @@ function FusionImage({
           ? "triples"
           : "base";
   const types = pokemon.types || [];
-  const spriteTypeClass = spriteType !== "autogen" ? "sprite-highlight" : "autogen-highlight";
+  const spriteTypeClass =
+    spriteType !== "autogen" ? "sprite-highlight" : "autogen-highlight";
   const imageURL = () => {
     if (spoilerMode && spriteType === "fusion") {
       return config.placeholders.spoilerImage;
@@ -292,16 +315,16 @@ function FusionImage({
   return (
     <div className="mx-auto max-w-[19rem]">
       <div className="flex justify-between mx-2 mb-1">
-        <p className="flex gap-1 max-w-min text-sm truncate">
-          {pokemon.has_pokedex_entry && (
-            <TooltipWrapper content="Has Custom Dex Entry">
-              <Book className="size-4 text-blue-500 text-xs" />
-            </TooltipWrapper>
-          )}
-          <span className="text-primary hover:text-green-700 truncate">
+        <div className="flex gap-1 max-w-min text-sm truncate">
+          <p className="text-primary hover:text-green-700 truncate">
             {pokemon.name}
-          </span>
-        </p>
+          </p>
+          {pokemon.has_pokedex_entry && (
+            <PokedexEntryDialog
+              pokedex_entry={pokemon.pokedex_entry as PokedexEntryType[]}
+            />
+          )}
+        </div>
         <div className="flex gap-1">
           <AllShiniesDialog
             pokemon={pokemon}
@@ -314,7 +337,6 @@ function FusionImage({
         </div>
       </div>
       <div className="fusion-image">
-
         <div></div>
         <div>
           <p>

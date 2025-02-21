@@ -38,6 +38,16 @@ export const metadata: Metadata = {
 
 const changeLogs = [
   {
+    date: "2025-02-21",
+    changes: [
+      {
+        title: "New Feature: Dialog for Custom Dex Entries",
+        description:
+          "Added a new dialog box that allows users to view and edit custom Pokédex entries for fusions.",
+      },
+    ],
+  },
+  {
     date: "2025-02-19",
     changes: [
       {

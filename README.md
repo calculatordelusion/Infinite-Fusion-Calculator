@@ -1,4 +1,3 @@
-
 # **Pokémon Infinite Fusion Calculator**  
 
 ![Fusion Preview](https://raw.githubusercontent.com/Kampita/infinite-fusion-calculator/refs/heads/main/public/images/og/infinite-fusion-calculator.png)  
@@ -13,6 +12,7 @@ This project is based on the **Pokémon Infinite Fusion Dex**, originally create
 - ✅ **Added new sprites** and updated the sprite pack  
 - ✅ **Improved UI/UX** with a better fusion display  
 - ✅ **New dialogs for a better user experience**  
+- ✅ **New feature: Dialog Box for Custom Dex Entries**  
 - ✅ **Bug fixes and feature updates**  
 - ✅ **Open-source & accepting community contributions**  
 
@@ -23,9 +23,8 @@ This project is based on the **Pokémon Infinite Fusion Dex**, originally create
 - 🔥 **Fuse any two Pokémon** to create unique hybrids  
 - 🎨 **Custom sprites** contributed by the community  
 - 📊 **Extensive database** with over **251,000+ fusions**  
-- 🌍 **Multilingual support** *(Planned feature)*  
-- 📝 **Next Feature:** **Dialog Box for Custom Dex Entries**  
-
+- 📝 **New Feature:** **Dialog Box for Custom Dex Entries**  
+- 🌍 **Multilingual support** *(Planned feature)* 
 ---
 
 ## 🛠️ **Contributing**  
