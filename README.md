@@ -1,37 +1,38 @@
-# Pokémon Infinite Fusion Calculator
 
-A web-based tool for generating and exploring Pokémon fusions!
+# **Pokémon Infinite Fusion Calculator**  
 
-![Fusion Preview](https://github.com/Kampita/infinite-fusion-calculator/blob/main/public/images/og/infinite-fusion-calculator.png)
+![Fusion Preview](https://raw.githubusercontent.com/Kampita/infinite-fusion-calculator/refs/heads/main/public/images/og/infinite-fusion-calculator.png)  
 
-## 📜 About
+## 📜 **About**  
 
-This project was originally created by **W3vish**, but as he is currently not modifying it, I have taken permission from him to maintain and update the project.
+This project is based on the **Pokémon Infinite Fusion Dex**, originally created by **W3vish**. His dex included a **Fusion Calculator**, and with his permission, I have taken over the maintenance and further development of the **Fusion Calculator**.  
 
-### 🔄 Updates & Improvements
+### 🔄 **What Has Changed?**  
 
-- ✅ Updated the sprite pack with new fusions  
-- ✅ Added interactive dialogs for better user experience  
-- ✅ Improved site performance and UI updates  
-- ✅ Open for contributions and community involvement  
+- ✅ **Updated the Fusion Calculator's code** for better performance  
+- ✅ **Added new sprites** and updated the sprite pack  
+- ✅ **Improved UI/UX** with a better fusion display  
+- ✅ **New dialogs for a better user experience**  
+- ✅ **Bug fixes and feature updates**  
+- ✅ **Open-source & accepting community contributions**  
 
 ---
 
-## 🚀 Features
+## 🚀 **Features**  
 
 - 🔥 **Fuse any two Pokémon** to create unique hybrids  
-- 🎨 **Custom sprites** created by the community  
+- 🎨 **Custom sprites** contributed by the community  
 - 📊 **Extensive database** with over **251,000+ fusions**  
 - 🌍 **Multilingual support** *(Planned feature)*  
-- 📝 **Next Feature:** Dialog Box for Custom Dex Entries  
+- 📝 **Next Feature:** **Dialog Box for Custom Dex Entries**  
 
 ---
 
-## 🛠️ Contributing
+## 🛠️ **Contributing**  
 
-Contributions are welcome! If you’d like to add new features, fix bugs, or improve sprites, feel free to submit a pull request.
+Contributions are welcome! If you’d like to add new features, fix bugs, or improve sprites, feel free to submit a pull request.  
 
-### **How to Contribute**
+### **How to Contribute**  
 
 ```sh
 # 1. Fork the repository
@@ -48,3 +49,12 @@ git commit -m "Added new feature"
 git push origin feature-name
 
 # 6. Submit a pull request on GitHub
+```  
+
+---
+
+## ❤️ **Acknowledgments**  
+
+Special thanks to **W3vish** for creating the **Infinite Fusion Dex** and allowing me to maintain the **Fusion Calculator**. This project would not exist without his initial work and contributions from the **Pokémon Fusion community**!  
+
+---
