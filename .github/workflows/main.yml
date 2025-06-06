@@ -1,0 +1,26 @@
+name: Test gallery-dl on macOS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-macos-gallery-dl:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Download gallery-dl macOS binary
+        run: |
+          curl -L -o gallery-dl.bin https://github.com/mikf/gallery-dl/releases/download/v1.29.7/gallery-dl.bin
+          chmod +x gallery-dl.bin
+          mv gallery-dl.bin gallery-dl
+
+      - name: Check gallery-dl version
+        run: |
+          ./gallery-dl --version
+
+      - name: Run gallery-dl against Instagram profile
+        run: |
+          ./gallery-dl https://instagram.com/shreyaghoshal
