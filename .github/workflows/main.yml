@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout gallery-dl source
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: mikf/gallery-dl
           ref: v1.29.7
@@ -33,7 +33,7 @@ jobs:
         run: ./dist/gallery-dl https://instagram.com/shreyaghoshal
 
       - name: Upload built binary as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: gallery-dl-macos
           path: dist/gallery-dl
