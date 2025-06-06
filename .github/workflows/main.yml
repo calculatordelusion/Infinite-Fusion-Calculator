@@ -1,40 +1,38 @@
-name: Build gallery-dl from source (macOS)
+name: Build and test gallery-dl on macOS
 
 on:
   workflow_dispatch:
 
 jobs:
-  build-from-source:
+  build:
     runs-on: macos-latest
 
     steps:
-      - name: Clone gallery-dl repo at tag v1.29.7
+      - name: Checkout gallery-dl
         uses: actions/checkout@v4
         with:
           repository: mikf/gallery-dl
           ref: v1.29.7
 
-      - name: Set up Python environment (user-safe)
+      - name: Set up virtual environment
         run: |
-          python3 -m pip install --upgrade --user pip setuptools wheel
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip setuptools wheel
+          pip install .
 
-      - name: Install gallery-dl locally
+      - name: Test gallery-dl version
         run: |
-          python3 -m pip install --user .
+          source venv/bin/activate
+          venv/bin/gallery-dl --version
 
-      - name: Run version check
-        run: ~/.local/bin/gallery-dl --version
-
-      - name: Run test scrape
-        run: ~/.local/bin/gallery-dl https://instagram.com/shreyaghoshal
-
-      - name: Copy binary for upload
+      - name: Test with Instagram profile
         run: |
-          mkdir -p dist
-          cp ~/.local/bin/gallery-dl dist/gallery-dl
+          source venv/bin/activate
+          venv/bin/gallery-dl https://instagram.com/shreyaghoshal
 
-      - name: Upload binary
+      - name: Upload gallery-dl script
         uses: actions/upload-artifact@v4
         with:
-          name: gallery-dl-built-macos
-          path: dist/gallery-dl
+          name: gallery-dl-macos-script
+          path: venv/bin/gallery-dl
