@@ -1,39 +1,40 @@
-name: Build and Test gallery-dl on macOS
+name: Build gallery-dl from source (macOS)
 
 on:
   workflow_dispatch:
 
 jobs:
-  build-and-test:
+  build-from-source:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout gallery-dl source
+      - name: Clone gallery-dl repo at tag v1.29.7
         uses: actions/checkout@v4
         with:
           repository: mikf/gallery-dl
           ref: v1.29.7
 
-      - name: Set up Python and dependencies
+      - name: Set up Python environment (user-safe)
         run: |
-          brew install python
-          python3 -m ensurepip --upgrade
-          python3 -m pip install --upgrade pip setuptools wheel
-          python3 -m pip install pyinstaller
+          python3 -m pip install --upgrade --user pip setuptools wheel
 
-      - name: Build standalone binary using PyInstaller
+      - name: Install gallery-dl locally
         run: |
-          python3 -m PyInstaller --onefile --name gallery-dl __main__.py
-          chmod +x dist/gallery-dl
+          python3 -m pip install --user .
 
-      - name: Check binary version
-        run: ./dist/gallery-dl --version
+      - name: Run version check
+        run: ~/.local/bin/gallery-dl --version
 
-      - name: Run gallery-dl against Instagram profile
-        run: ./dist/gallery-dl https://instagram.com/shreyaghoshal
+      - name: Run test scrape
+        run: ~/.local/bin/gallery-dl https://instagram.com/shreyaghoshal
 
-      - name: Upload built binary as artifact
+      - name: Copy binary for upload
+        run: |
+          mkdir -p dist
+          cp ~/.local/bin/gallery-dl dist/gallery-dl
+
+      - name: Upload binary
         uses: actions/upload-artifact@v4
         with:
-          name: gallery-dl-macos
+          name: gallery-dl-built-macos
           path: dist/gallery-dl
