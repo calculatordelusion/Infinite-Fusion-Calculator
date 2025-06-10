@@ -24,8 +24,8 @@ const config = {
     },
   },
   site: {
-    name: "Infinite Fusion Calculator",
-    mainURL: "https://fusioncalculator.site",
+    name: "Pokemon Infinite Fusion Calculator",
+    mainURL: "https://pokemoninfinitefusioncalculator.xyz",
     gaId: "",
     adsenseId: "",
     socialLinks: {

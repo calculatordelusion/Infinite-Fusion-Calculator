@@ -57,11 +57,11 @@ export default function Header() {
                   className="group flex items-center space-x-2"
                 >
                   <Image
-                    src={`/DNASPLICERS.png`}
-                    alt="DNA SPLICERS"
-                    height={46}
-                    width={46}
-                    className="size-10 group-hover:scale-110 transition-transform duration-300"
+                    src={`/pokemon-infnite-fusion-calculator.png`}
+                    alt="pokemon infinite fusion calculator"
+                    height={396}
+                    width={396}
+                    className="size-110 group-hover:scale-110 transition-transform duration-300"
                   />
                 </Link>
               </TooltipTrigger>
