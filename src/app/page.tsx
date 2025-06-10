@@ -112,7 +112,7 @@ function Page() {
       <CardHeader className="p-1 px-2 text-center">
         <h1 className="text-2xl">Pokémon Infinite Fusion Calculator</h1>
         <CardDescription className="mx-auto max-w-screen-xl text-muted-foreground text-sm">
-          The most advanced Pokémon fusion generator online. Combine any two of {gameInfo.totalPokemons} base Pokémon to create {gameInfo.totalFusions.toLocaleString()} possible fusion combinations with custom sprites, stats, and abilities.
+          The most advanced Pokémon infinite fusion calculator online. Combine any two of {gameInfo.totalPokemons} base Pokémon to create {gameInfo.totalFusions.toLocaleString()} possible fusion combinations with custom sprites, stats, and abilities.
         </CardDescription>
       </CardHeader>
 
