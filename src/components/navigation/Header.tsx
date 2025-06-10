@@ -57,7 +57,7 @@ export default function Header() {
                   className="group flex items-center space-x-2"
                 >
                   <Image
-                    src={`/pokemon-infnite-fusion-calculator.png`}
+                    src={`/pokemon-infinite-fusion-calculator.png`}
                     alt="pokemon infinite fusion calculator"
                     height={396}
                     width={396}
