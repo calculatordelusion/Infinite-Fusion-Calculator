@@ -40,47 +40,67 @@ export const metadata: Metadata = {
 
 const changeLogs = [
   {
-    date: "2024-06-15",
+    date: "2025-06-10",
     changes: [
       {
-        title: "Enhanced Fusion Database with 5,000+ New Sprites",
+        title: "AI-Powered Fusion Suggestions",
         description:
-          "Added an extensive collection of new custom fusion sprites to our database, bringing more creative options for Pokémon trainers. All new sprites are properly credited to their talented artists.",
+          "Implemented a new AI recommendation system that suggests optimal fusion combinations based on your preferences and battle strategy needs. The system learns from popular community fusions and competitive meta trends.",
       },
       {
-        title: "Improved Mobile Experience",
+        title: "Cross-Generation Fusion Support",
         description:
-          "Optimized the infinite fusion calculator for mobile devices with faster loading times, better touch controls, and responsive design improvements for seamless fusion creation on smartphones.",
-      },
-    ],
-  },
-  {
-    date: "2024-05-28",
-    changes: [
-      {
-        title: "Advanced Type Matchup Calculator",
-        description:
-          "Implemented a dual-type effectiveness calculator that accurately displays offensive and defensive matchups for fusion Pokémon with combined typing. Now shows 4x strengths and weaknesses.",
+          "Added compatibility for fusing Pokémon across all generations (Gen I-IX) with updated move pools and abilities. Now supports the latest Pokémon from Scarlet/Violet DLC.",
       },
     ],
   },
   {
-    date: "2024-05-10",
+    date: "2025-05-22",
     changes: [
       {
-        title: "Fusion Sharing Feature",
+        title: "3D Fusion Viewer",
         description:
-          "New share button allows users to generate links to their favorite fusions. Perfect for sharing your unique Pokémon creations on social media or with friends.",
+          "Launched our revolutionary 3D model viewer that renders fused Pokémon in full 3D with customizable animations, lighting, and camera angles. Works with all modern browsers and mobile devices.",
+      },
+      {
+        title: "Real-Time Community Feed",
+        description:
+          "Added a live feed showing the most popular fusions being created worldwide right now, with upvotes and the ability to instantly try any featured fusion.",
       },
     ],
   },
   {
-    date: "2024-04-22",
+    date: "2025-04-15",
     changes: [
       {
-        title: "Pokédex Entry Expansion",
+        title: "Advanced Competitive Analysis",
         description:
-          "Added 2,000+ new custom Pokédex entries for popular fusion combinations. These creative descriptions bring your fused Pokémon to life with unique backstories and characteristics.",
+          "New competitive tools including tier rankings for fused Pokémon, suggested EV spreads, and recommended move sets based on actual player battle data from ranked fusion battles.",
+      },
+    ],
+  },
+  {
+    date: "2025-03-08",
+    changes: [
+      {
+        title: "Fusion Breeding Simulator",
+        description:
+          "Added a breeding calculator that predicts egg moves, abilities, and inheritance patterns for fused Pokémon offspring, including shiny probability calculations.",
+      },
+      {
+        title: "Augmented Reality Mode",
+        description:
+          "Mobile users can now view their fused Pokémon in AR space through their device camera, with options to take photos and share AR snapshots.",
+      },
+    ],
+  },
+  {
+    date: "2025-02-18",
+    changes: [
+      {
+        title: "Custom Sprite Workshop",
+        description:
+          "Launched an in-browser sprite editor that lets users create and submit their own fusion sprites directly through our platform, with automatic formatting for game compatibility.",
       },
     ],
   },
@@ -105,7 +125,7 @@ function Page() {
             <TableHeader>
               <TableRow>
                 <TableHead colSpan={2}>
-                  <h2 className="mx-auto font-bold text-xl text-center">Pokémon Fusion Statistics (v7.2)</h2>
+                  <h2 className="mx-auto font-bold text-xl text-center">Pokémon Fusion Statistics (v9.5)</h2>
                 </TableHead>
               </TableRow>
             </TableHeader>
