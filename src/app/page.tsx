@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/infinite-fusion-calculator.png",
+        url: "/images/og/infinite-fusion-calculator.png",
         width: 1920,
         height: 1080,
         alt: "Pokémon Infinite Fusion Calculator",
